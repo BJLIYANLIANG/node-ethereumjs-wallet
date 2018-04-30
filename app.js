@@ -1,7 +1,8 @@
 // requires the Wallet constructor
 
-var Wallet = require('./wallet');
-
+// var Wallet = require('./wallet');
+require('./ethereumjs-wallet.min');
+console.log(Wallet)
 // create a test wallet
 var w = Wallet.generate();
 
@@ -12,4 +13,4 @@ var key = w.getPrivateKeyString();
 console.log({address,key});
 
 var w2 = Wallet.fromPrivateKey(key);
-console.log(w2.getAddressString() === address)
+console.log(w2.getAddressString() === address);
